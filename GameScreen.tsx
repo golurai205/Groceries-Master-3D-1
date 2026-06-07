@@ -489,16 +489,34 @@ export default function GameScreen({
             style={{ boxShadow: '0 8px 0 rgba(0,0,0,0.3)' }}>
             <h2 className="text-2xl font-black text-purple-700 mb-4">Paused</h2>
             <div className="flex flex-col gap-3">
-              <button onClick={() => { setPaused(false); setShowPause(false); sfx.click(); }}
-                className="py-2.5 rounded-2xl font-black text-white text-lg btn-3d"
-                style={{ background: 'linear-gradient(180deg, #4ade80, #16a34a)', boxShadow: '0 4px 0 #14532d' }}>
-                ▶ Resume
-              </button>
-              <button onClick={() => { sfx.click(); onQuit(); }}
-                className="py-2.5 rounded-2xl font-black text-white text-lg btn-3d"
-                style={{ background: 'linear-gradient(180deg, #fb7185, #e11d48)', boxShadow: '0 4px 0 #881337' }}>
-                Quit
-              </button>
+              <button
+  onClick={() => {
+    setPaused(false);
+    setShowPause(false);
+    sfx.click();
+  }}
+  className="py-2.5 rounded-2xl font-black text-white text-lg btn-3d"
+  style={{
+    background: "linear-gradient(180deg, #4ade80, #16a34a)",
+    boxShadow: "0 4px 0 #14532d"
+  }}
+>
+  Resume
+</button>
+
+<button
+  onClick={() => {
+    sfx.click();
+    onQuit();
+  }}
+  className="py-2.5 rounded-2xl font-black text-white text-lg btn-3d"
+  style={{
+    background: "linear-gradient(180deg, #fb7185, #e11d48)",
+    boxShadow: "0 4px 0 #881337"
+  }}
+>
+  Quit
+</button>
             </div>
           </div>
         </div>
